@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Döp larmet — Sveriges telefoner får ett namn</title>
+<meta name="description" content="7 december 15:00 larmar varje telefon i Sverige samtidigt. Larmet har inget namn. Rösta på vad det ska heta.">
+<meta name="theme-color" content="#08080a">
+<meta property="og:title" content="Döp larmet">
+<meta property="og:description" content="7 december 15:00 larmar varje telefon i Sverige. Larmet har inget namn. Det ska få ett.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://doplarmet.se/">
+<meta property="og:image" content="https://doplarmet.se/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%2308080a'/><circle cx='16' cy='16' r='7' fill='%23ff2f2f'/></svg>">
+</head>
+<body data-act="poll">
+
+<a class="skip" href="#poll">Hoppa till röstningen</a>
+
+<div class="wrap">
+  <div class="top">
+    <span><span class="dot" aria-hidden="true"></span><b>SE-ALERT</b> &nbsp;/&nbsp; nationellt test</span>
+    <span id="topcount" class="mono">T–12 dagar</span>
+  </div>
+</div>
+
+<!-- ============================== POLL ============================== -->
+<main class="wrap act-poll" id="main">
+  <section class="hero">
+    <p class="kicker">Måndag 7 december 2026 · 15:00:00</p>
+    <h1>DÖP<br><em>larmet</em></h1>
+    <p class="lede">
+      Sveriges telefoner har fått ett larm. Det låter i tio sekunder, i maxvolym,
+      även på ljudlös. Hela landet på samma gång.
+      <s>Larmet har inget namn.</s> Det ska få ett.
+    </p>
+
+    <div class="count" role="timer" aria-label="Tid till larmet">
+      <div class="cell"><div class="n" id="cd-d">12</div><div class="l">dagar</div></div>
+      <div class="cell"><div class="n" id="cd-h">04</div><div class="l">timmar</div></div>
+      <div class="cell"><div class="n" id="cd-m">12</div><div class="l">minuter</div></div>
+      <div class="cell"><div class="n" id="cd-s">00</div><div class="l">sekunder</div></div>
+    </div>
+
+    <div class="cta">
+      <a class="btn" href="#poll">Rösta →</a>
+      <button class="btn ghost" id="demoBtn" type="button" hidden>Förhandsvisa 15:00</button>
+      <a class="btn ghost" href="https://www.krisinformation.se" target="_blank" rel="noopener">Vad är SE-Alert?</a>
+    </div>
+  </section>
+
+  <div class="facts">
+    <div class="fact"><div class="k">15:00</div><div class="v"><b>Tio sekunder.</b> Larmet går i alla kompatibla telefoner i Sverige – utan app, utan internet, utan registrering.</div></div>
+    <div class="fact"><div class="k">15:05</div><div class="v"><b>Faran över.</b> Allclear skickas. Det är då namnet avslöjas.</div></div>
+    <div class="fact"><div class="k">Första gången</div><div class="v">SE-Alert har testats i två län. Aldrig i <b>hela landet</b>. Det är nu.</div></div>
+    <div class="fact"><div class="k">Föregångaren</div><div class="v">Utomhussirenen fick sitt namn av en tidning på 30-talet. <b>Hesa Fredrik.</b> Nu är det vår tur.</div></div>
+  </div>
+
+  <section class="poll" id="poll">
+    <div class="head">
+      <h2>Vad ska det heta?</h2>
+      <span class="tag mono" id="pollStatus">röstning öppen</span>
+    </div>
+    <p class="sub">Samma logik som namngav Hesa Fredrik: folket bestämmer, myndigheten får leva med det.</p>
+
+    <div class="board" id="board" aria-live="polite"></div>
+
+    <form class="suggest" id="suggestForm">
+      <label class="visually-hidden" for="suggestInput">Eget förslag</label>
+      <input id="suggestInput" maxlength="28" placeholder="Eget förslag…" autocomplete="off">
+      <button class="btn ghost" type="submit">Lägg till</button>
+    </form>
+    <p class="note mono" id="note"></p>
+  </section>
+
+  <section class="how">
+    <div class="head"><h2>Så går det till</h2></div>
+    <ol class="steps">
+      <li class="step">
+        <div class="t mono">FÖRE</div>
+        <h3>Rösta och föreslå</h3>
+        <p>Namnen samlas in fram till 14:59 den 7 december. Diskussionen sker i Discord, inte i en kommentarsmoderering.</p>
+      </li>
+      <li class="step">
+        <div class="t mono">15:00:00</div>
+        <h3>Alla telefoner låter</h3>
+        <p>Sajten byter skepnad i samma sekund som larmet går. Ingen refresh, ingen server som smälter – sidan är statisk och förladdad.</p>
+      </li>
+      <li class="step">
+        <div class="t mono">15:05</div>
+        <h3>Faran över</h3>
+        <p>Allclear. Vinnarnamnet avslöjas på samma skärm som alla just stirrade på. Sedan blir sidan ett arkiv.</p>
+      </li>
+    </ol>
+  </section>
+</main>
+
+<!-- ============================== CLEAR ============================== -->
+<main class="wrap act-clear">
+  <section class="hero">
+    <p class="kicker" id="clearKicker">15:05 · FARAN ÖVER</p>
+    <h1 class="clear-title">Faran<br><em>över</em></h1>
+    <p class="lede">Sveriges telefoner har tystnat. Inget hände. Det var meningen.</p>
+  </section>
+
+  <section class="result">
+    <div class="head">
+      <h2>Larmet heter</h2>
+      <span class="tag mono" id="resultMeta">—</span>
+    </div>
+    <p class="winner" id="winner">—</p>
+    <p class="sub" id="winnerSub">
+      Ett smeknamn, inte ett beslut. Det officiella namnet är SE-Alert och det bestämmer myndigheterna.
+      Men Hesa Fredrik bestämde ingen myndighet heller.
+    </p>
+    <div class="cta">
+      <button class="btn" id="shareBtn" type="button">Dela</button>
+      <a class="btn ghost" href="https://www.krisinformation.se" target="_blank" rel="noopener">Krisinformation.se</a>
+    </div>
+  </section>
+
+  <section class="how">
+    <div class="head"><h2>Vad hände?</h2></div>
+    <ol class="steps">
+      <li class="step">
+        <div class="t mono">15:00</div>
+        <h3>Larmet</h3>
+        <p>SE-Alert – cell broadcast – skickade ett test till alla kompatibla telefoner i Sverige. Tio sekunder, maxvolym, även på ljudlös.</p>
+      </li>
+      <li class="step">
+        <div class="t mono">15:05</div>
+        <h3>Allclearet</h3>
+        <p>"Faran över". Alla tittade på sina telefoner, och det fanns ingenting att göra med det.</p>
+      </li>
+      <li class="step">
+        <div class="t mono">NU</div>
+        <h3>Namnet</h3>
+        <p>Ett skämt som blev en omröstning. Nästa gång larmet går är det fler som vet vad de ska kalla det.</p>
+      </li>
+    </ol>
+  </section>
+</main>
+
+<!-- ============================== ALARM OVERLAY ============================== -->
+<div id="alarm" class="alarm" role="dialog" aria-modal="true" aria-labelledby="alarmH" hidden>
+  <div class="alarm-inner">
+    <p class="alarm-tag mono"><span class="dot" aria-hidden="true"></span>SE-ALERT · NATIONELLT TEST</p>
+    <h2 class="alarm-h" id="alarmH">Viktigt meddelande<br>till allmänheten</h2>
+    <p class="alarm-b">
+      Detta är ett test av Sveriges nya varningslarm. Ingen fara föreligger.
+      <em>This is a test of the Swedish public warning system. No danger.</em>
+    </p>
+    <div class="alarm-count mono" id="alarmCount" aria-live="off">05:00</div>
+    <p class="alarm-foot mono">till ”Faran över” · namnet avslöjas då</p>
+  </div>
+</div>
+
+<!-- ============================== FOOTER ============================== -->
+<div class="wrap">
+  <footer>
+    <span>Ett community-projekt från <a href="https://opensverige.se" target="_blank" rel="noopener">opensverige</a>. Inte en myndighet. Inget här är ett larm.</span>
+    <span><a href="https://www.krisinformation.se" target="_blank" rel="noopener">Riktig information: krisinformation.se</a></span>
+  </footer>
+</div>
+
+<script src="assets/config.js"></script>
+<script src="assets/candidates.js"></script>
+<script src="assets/tally.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

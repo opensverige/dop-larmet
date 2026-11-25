@@ -1,0 +1,12 @@
+name = "doplarmet-tally"
+main = "worker.js"
+compatibility_date = "2026-11-01"
+
+# En Durable Object räcker: alla röster går genom samma instans.
+[[durable_objects.bindings]]
+name = "TALLY"
+class_name = "Tally"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["Tally"]
