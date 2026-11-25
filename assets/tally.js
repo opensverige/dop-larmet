@@ -78,10 +78,19 @@ window.createTally = function createTally(options) {
 
     get: function () {
       if (!api) return Promise.resolve(combine(local));
-      return request("/tally", null).catch(function () {
-        // Nätet ligger nere? Visa det vi har istället för att visa noll.
-        return combine(local);
-      });
+      return request("/tally?voter=" + encodeURIComponent(local.voter), null)
+        .then(function (data) {
+          // Servern minns vår röst även efter omladdning.
+          if (data && data.mine) {
+            local.mine = data.mine;
+            writeLocal(local);
+          }
+          return data;
+        })
+        .catch(function () {
+          // Nätet ligger nere? Visa det vi har istället för att visa noll.
+          return combine(local);
+        });
     },
 
     vote: function (id) {
